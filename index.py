@@ -4,8 +4,6 @@ print()
 import cgi, os, view, html_sanitizer
 sanitizer = html_sanitizer.Sanitizer()
 
-
-
 form = cgi.FieldStorage()
 if 'id' in form:
     title = pageId = form["id"].value
@@ -22,7 +20,7 @@ if 'id' in form:
         </form>
     '''.format(pageId)
 else:
-    pageId = 'Welcome'
+    title = pageId = 'Welcome'
     description = 'Hello, web'
     update_link = ''
     delete_action = ''
